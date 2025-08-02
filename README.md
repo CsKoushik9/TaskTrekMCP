@@ -2,6 +2,11 @@
 
 A Model Context Protocol (MCP) server for TaskTrek project management system that enables AI assistants to interact with TaskTrek programmatically.
 
+## Related Projects
+
+- **TaskTrek Web App**: [https://github.com/CsKoushik9/TaskTrek](https://github.com/CsKoushik9/TaskTrek)
+- **TaskTrek MCP Server**: [https://github.com/CsKoushik9/TaskTrekMCP](https://github.com/CsKoushik9/TaskTrekMCP)
+
 ## Architecture Flow
 
 ```
@@ -84,10 +89,17 @@ Get detailed information about a specific task:
 Get a summary of tasks with statistics:
 - `projectId`: Filter by project ID (optional)
 
+## Prerequisites
+
+1. **Node.js** (v14 or higher)
+2. **npm** or **yarn**
+3. **TaskTrek Web App** (optional, for visual interface)
+
 ## Installation
 
-1. Navigate to the TaskTrekMCP directory:
+1. Clone the repository:
 ```bash
+git clone https://github.com/CsKoushik9/TaskTrekMCP.git
 cd TaskTrekMCP
 ```
 
@@ -95,6 +107,38 @@ cd TaskTrekMCP
 ```bash
 npm install
 ```
+
+3. Verify the server runs correctly:
+```bash
+npm start
+```
+
+## VS Code Integration Setup
+
+For detailed VS Code integration with Cline extension, see the [vscode-genai-setup.md](vscode-genai-setup.md) file which provides:
+
+- Step-by-step Cline extension installation
+- MCP server configuration for VS Code
+- Alternative Claude Desktop setup
+- Test commands and troubleshooting
+
+### Quick VS Code Setup
+
+1. Install the **Cline** extension in VS Code
+2. Configure MCP server in Cline settings:
+```json
+{
+  "mcpServers": {
+    "tasktrek": {
+      "command": "node",
+      "args": ["index.js"],
+      "cwd": "/path/to/TaskTrekMCP"
+    }
+  }
+}
+```
+3. Start the MCP server: `npm start`
+4. Test with: "List all projects" in Cline chat
 
 ## Usage
 
