@@ -1,0 +1,21 @@
+{
+  "name": "tasktrek-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for TaskTrek project management",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node test.js",
+    "client": "node cli-client.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "keywords": ["mcp", "tasktrek", "project-management"],
+  "author": "TaskTrek Team",
+  "license": "MIT"
+}

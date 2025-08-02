@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "tasktrek": {
+      "command": "node",
+      "args": ["index.js"],
+      "cwd": "d:/genAI/projects/TaskTrekMCP",
+      "env": {}
+    }
+  }
+}
